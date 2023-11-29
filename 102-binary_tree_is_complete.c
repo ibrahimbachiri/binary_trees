@@ -36,7 +36,7 @@ int is_complete_util(const binary_tree_t *tree, int index, int nodes_count)
 		return (0);
 
 	return (is_complete_util(tree->left, 2 * index + 1, nodes_count) &&
-	is_complete_util(tree->right, 2 * index + 2, nodes_count));
+			is_complete_util(tree->right, 2 * index + 2, nodes_count));
 }
 
 /**
