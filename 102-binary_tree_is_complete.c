@@ -8,15 +8,15 @@
  */
 int binary_tree_is_complete(const binary_tree_t *tree)
 {
-    int nodes_count = 0;
-    int index = 0;
+	int nodes_count = 0;
+	int index = 0;
 
-    if (tree == NULL)
-        return (0);
+	if (tree == NULL)
+		return (0);
 
-    nodes_count = binary_tree_size(tree);
+	nodes_count = binary_tree_size(tree);
 
-    return is_complete_util(tree, index, nodes_count);
+	return is_complete_util(tree, index, nodes_count);
 }
 
 /**
@@ -29,14 +29,14 @@ int binary_tree_is_complete(const binary_tree_t *tree)
  */
 int is_complete_util(const binary_tree_t *tree, int index, int nodes_count)
 {
-    if (tree == NULL)
-        return (1);
+	if (tree == NULL)
+		return (1);
 
-    if (index >= nodes_count)
-        return (0);
+	if (index >= nodes_count)
+		return (0);
 
-    return (is_complete_util(tree->left, 2 * index + 1, nodes_count) &&
-            is_complete_util(tree->right, 2 * index + 2, nodes_count));
+	return (is_complete_util(tree->left, 2 * index + 1, nodes_count) &&
+		is_complete_util(tree->right, 2 * index + 2, nodes_count));
 }
 
 /**
@@ -47,8 +47,8 @@ int is_complete_util(const binary_tree_t *tree, int index, int nodes_count)
  */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
-    if (tree == NULL)
-        return (0);
+	if (tree == NULL)
+		return (0);
 
-    return (1 + binary_tree_size(tree->left) + binary_tree_size(tree->right));
+	return (1 + binary_tree_size(tree->left) + binary_tree_size(tree->right));
 }
