@@ -11,5 +11,5 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 		return;
 
 	for (int level = 1; level <= binary_tree_height(tree) + 1; level++)
-	binary_tree_traverse(tree, func, level);
+		binary_tree_traverse(tree, func, level);
 }
