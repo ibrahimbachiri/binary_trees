@@ -16,6 +16,14 @@ typedef struct binary_tree_s {
     struct binary_tree_s *right;
 } binary_tree_t;
 
+struct bst_node_s
+{
+    int n;
+    struct bst_node_s *parent;
+    struct bst_node_s *left;
+    struct bst_node_s *right;
+};
+
 /* Function prototypes */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 void binary_tree_print(const binary_tree_t *tree);
