@@ -40,4 +40,7 @@ int is_complete_util(const binary_tree_t *tree, int index, int nodes_count);
 size_t binary_tree_size(const binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+int binary_tree_is_bst(const binary_tree_t *tree);
+int binary_tree_is_bst(const binary_tree_t *tree);
+int is_bst_util(const binary_tree_t *tree, int min, int max);
 #endif/* BINARY_TREES_H */
