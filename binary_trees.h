@@ -9,7 +9,8 @@
 typedef struct binary_tree_s binary_tree_t;
 typedef struct bst_node_s bst_t;
 
-typedef struct binary_tree_s {
+struct binary_tree_s
+{
     int n;
     struct binary_tree_s *parent;
     struct binary_tree_s *left;
@@ -55,4 +56,5 @@ binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 int binary_tree_is_bst(const binary_tree_t *tree);
 int is_bst_util(const binary_tree_t *tree, int min, int max);
 bst_t *bst_insert(bst_t **tree, int value);
-#endif/* BINARY_TREES_H */
+
+#endif /* BINARY_TREES_H */
