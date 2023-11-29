@@ -3,8 +3,12 @@
 
 #include <stddef.h>
 #include <limits.h>
+#include <stdlib.h>
 
 /* Basic binary tree structure */
+typedef struct binary_tree_s binary_tree_t;
+typedef struct bst_node_s bst_t;
+
 typedef struct binary_tree_s {
     int n;
     struct binary_tree_s *parent;
