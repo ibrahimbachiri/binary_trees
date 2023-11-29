@@ -57,5 +57,6 @@ int binary_tree_is_bst(const binary_tree_t *tree);
 int is_bst_util(const binary_tree_t *tree, int min, int max);
 bst_t *bst_insert(bst_t **tree, int value);
 bst_t *bst_search(const bst_t *tree, int value);
+bst_t *bst_remove(bst_t *root, int value);
 
 #endif /* BINARY_TREES_H */
