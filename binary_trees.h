@@ -5,17 +5,9 @@
 #include <limits.h>
 #include <stdlib.h>
 
-/* Basic binary tree structure */
+/* Basic binary tree structure*/
 typedef struct binary_tree_s binary_tree_t;
 typedef struct bst_node_s bst_t;
-
-struct binary_tree_s
-{
-    int n;
-    struct binary_tree_s *parent;
-    struct binary_tree_s *left;
-    struct binary_tree_s *right;
-};
 
 struct bst_node_s
 {
@@ -32,6 +24,16 @@ typedef struct avl_tree_s {
     struct avl_tree_s *right;
     int height;
 } avl_t;
+
+typedef struct binary_tree_s {
+    int n;
+    struct binary_tree_s *left;
+    struct binary_tree_s *right;
+    struct binary_tree_s *parent;
+} binary_tree_t;
+
+/* AVL Tree Structure */
+typedef struct binary_tree_s avl_t;
 
 /* Function prototypes */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
