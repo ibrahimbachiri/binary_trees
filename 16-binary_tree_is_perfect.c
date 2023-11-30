@@ -55,6 +55,5 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	left_height = binary_tree_height(tree->left);
 	right_height = binary_tree_height(tree->right);
 
-	/* Check if the tree is full and left and right subtrees are perfect */
 	return (binary_tree_is_full(tree) && left_height == right_height);
 }
