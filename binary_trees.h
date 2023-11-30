@@ -23,6 +23,7 @@ typedef struct avl_tree_s {
     struct avl_tree_s *left;
     struct avl_tree_s *right;
     int height;
+	size_t height;
 } avl_t;
 
 typedef struct binary_tree_s {
@@ -71,4 +72,7 @@ bst_t *bst_remove(bst_t *root, int value);
 int binary_tree_is_avl(const binary_tree_t *tree);
 avl_t *avl_insert(avl_t **tree, int value);
 avl_t *sorted_array_to_avl(int *array, size_t size);
+int binary_tree_is_heap(const binary_tree_t *tree);
+int binary_tree_is_complete(const binary_tree_t *tree, size_t size, size_t index);
+int is_max_heap(const binary_tree_t *tree);
 #endif /* BINARY_TREES_H */
